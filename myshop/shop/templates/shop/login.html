@@ -1,0 +1,31 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{%block content%}
+<section>
+    <div class="container">
+        <div class="registration">
+            <h2>Вход в систему</h2>
+            <div class="form-wrap">
+                <div class="profile"> <img style="width: 100px" src="D:\HackerU\Web\myshop\img\icons\reg\reges.svg" alt="">
+                    <h2>Вход</h2>
+                </div>
+                {% for massage in massages %}
+                    <p id = "massages">{{message}}</p>
+                {% endfor %}
+                <form method="POST">
+                    {% csrf_token %}
+                    <div>
+                        <label name="username">Логин</label>
+                        <input type="text" >
+                    </div>
+                    <div>
+                        <label name="password">Пароль</label>
+                        <input type="text">
+                    </div>
+                    <button type="submit">Войти</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{%endblock%}

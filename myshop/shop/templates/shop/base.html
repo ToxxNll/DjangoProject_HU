@@ -1,0 +1,122 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car shop</title>
+
+    <link rel="stylesheet" href="{%static 'shop/css/main.css'%}">
+    <link rel="stylesheet" href="{%static 'shop/css/top-bottom.css'%}">
+    <link rel="stylesheet" href="{%static 'shop/css/slider.css'%}">
+    <link href="{%static 'shop/css/bootstrap.min.css'%}" rel="stylesheet">
+    <link href="{%static 'shop/css/font-awesome.min.css'%}" rel="stylesheet">
+
+</head>
+<body>
+    <header>   
+        <div class="header">
+            <div class="container">
+                <div class="top-panel">
+                    <a href="index.html">Auto Shop</a>
+                    <div class="top-links">
+                        {% if user.is_authenticated %}
+                        <li><a href="" style="text-decoration:none; pointer-events:none">User: {{ user.get_username }}</a></li>
+                        <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+                        {% else %}
+                        <li><a href="{% url 'reg' %}">Регистрация</a></li>
+                        <li><a href="{% url 'login'%}">Войти</a></li>
+                        
+                        {% endif %}
+                        <!-- <ul>
+                            <li><a href="{% url 'reg' %}">Регистрация</a></li>
+                            <li><a href="{% url 'login'%}">Войти</a></li>
+                        </ul> -->
+                    </div>
+                </div>
+                <hr>
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="{% url 'home' %}"><img src="{%static 'shop\img\logo1.jpg'%}" alt=""></a>
+                    </div>
+                    <nav class="nav">
+                        <ul class="menu-list">
+
+                            <li class="menu-link">
+                                <a href="">Машины</a>
+                                <ul class="sub-menu-list">
+                                    <li class="sub-menu-link"><a href="{% url 'cars' %}">Легковые</a></li>
+                                    <li class="sub-menu-link"><a href="{% url 'minivans' %}">Минивэн</a></li>
+                                    <li class="sub-menu-link"><a href="{% url 'trucks' %}">Пикапы</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="menu-link">
+                                <a href="">Запчасти</a>
+                                <ul class="sub-menu-list">
+                                    <li class="sub-menu-link"><a href="{% url 'auto_parts' %}">Автозапчати</a></li>
+                                    <li class="sub-menu-link"><a href="{% url 'moto_parts' %}">Мотозапчати</a></li>
+                                    <li class="sub-menu-link"><a href="https://www.comtt.ru/">Запчати для комерческих</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-link">
+                                <a href="">Ремонт и услуги</a>
+                                <ul class="sub-menu-list">
+                                    <li class="sub-menu-link"><a href="https://westcoastcustoms.com/">Тюнинг</a></li>
+                                    <li class="sub-menu-link"><a href="">Ремонт</a></li>
+                                    <li class="sub-menu-link"><a href="">Услуги</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-link">
+                                <a href="">Комерческие</a>
+                                <ul class="sub-menu-list">
+                                    <li class="sub-menu-link"><a href="">Грузовики</a></li>
+                                    <li class="sub-menu-link"><a href="">Автобусы</a></li>
+                                    <li class="sub-menu-link"><a href="">Спецтехника</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {%block content%}
+    {%endblock%}
+
+
+    <footer>
+        <div class="container">
+            <div class="footer flex">
+                <div class="columns">
+                    <p>© 2014-2021 При использовании материалов сайта обязательным условием является наличие гиперссылки в пределах первого абзаца на страницу расположения исходной статьи.</p>
+                </div>
+                <div class="columns">
+                    <h3>Контакты</h3>
+                    <div class="social-net">
+                        <img src="{%static 'shop\img\icons\uil_whatsapp-alt.svg'%}" alt="">
+                        <img src="{%static 'shop\img\icons\Vector.svg'%}" alt="">
+                        <img src="{%static 'shop\img\icons\Vector-1.svg'%}" alt="">
+                        <img src="{%static 'shop\img\icons\Vector-2.svg'%}" alt="">
+                    </div>
+                </div>
+                <div class="columns">
+                    <h3>Мобильное приложение</h3>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Playmarket</a>
+                    <a href="">AppStore</a>
+                </div>
+                <div class="columns">
+                    <a href="">О магазине</a>
+                    <a href="">Главное меню</a>
+                    <a href="{% url 'contacts' %}">Контакты</a>
+                    <a href="">Каталог</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{%static 'shop/js/app.js'%}"></script>
+</body>
+</html>
+

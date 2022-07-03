@@ -1,0 +1,50 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{%block content%}
+<section>
+    <div class="container">
+        <div class="spec-add">
+            <div class="spec-add-content">
+                <p>Пикапы в вашем городе</p>
+            </div>
+        </div>
+    </div>
+</section>
+{%for object in object_list%}
+        <section>
+            <div class="container">
+                <div class="prod_list">
+                    <div class="prod">
+                        <div class="carss">
+                        <div class="prod_img">
+                            <a href="#"><img src="{{object.image.url}}" alt=""></a>
+                        </div>
+                        <div class="prod_content">
+                            <div class="prod_title">
+                                <a href="{% url 'info' %}">{{object.name}}</a>
+                                <p> {{object.short_description}}</p>
+                            </div>
+                            <div class="prod_links">
+                                    <p s>Алматы <span>500 просмотров</span></p>
+                                <a style="color: #D14F4F" href="{%url 'payment' id=object.id%}">Купить</a>
+                            </div>
+                        </div>
+                        <div class="prod_price">
+                            <p></p>
+                            <p>В кредит</p>
+                            <span>{{object.price}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+{%endfor%}
+<section>
+    <div class="container">
+        <div id="row"  class="row">
+            <p>Страницы: <a href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a><a href="#">....</a></p>
+        </div>
+    </div>
+</section>
+{%endblock%}

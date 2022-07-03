@@ -1,0 +1,653 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #E2E2E2;
+}
+section{
+    margin-top: 20px;
+}
+a {
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
+}
+
+
+
+
+
+
+
+.contactinfo ul li a {
+  font-size: 12px;
+  color: #3A3A3A;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+}
+
+
+.contactinfo ul li a:hover{
+    background:inherit;
+}
+
+.social-icons ul li a {
+  border: 0 none;
+  border-radius: 0;
+  color: #696763;
+  padding:0px;
+}
+
+
+.social-icons ul li{
+    display:inline-block;
+}
+
+.social-icons ul li a i {
+  padding: 11px 15px;
+   transition: all 0.9s ease 0s;
+  -moz-transition: all 0.9s ease 0s;
+  -webkit-transition: all 0.9s ease 0s;
+  -o-transition: all 0.9s ease 0s;
+}
+
+.social-icons ul li a i:hover{
+  color: #fff;
+   transition: all 0.9s ease 0s;
+  -moz-transition: all 0.9s ease 0s;
+  -webkit-transition: all 0.9s ease 0s;
+  -o-transition: all 0.9s ease 0s;
+}
+
+
+.fa-facebook:hover {
+  background: #0083C9;
+}
+
+.fa-twitter:hover  {
+    background:#5BBCEC;
+}
+
+.fa-linkedin:hover  {
+    background:#FF4518;
+}
+
+.fa-dribbble:hover  {
+    background:#90C9DC;
+}
+
+.fa-google-plus:hover  {
+    background:#CE3C2D;
+}
+
+
+
+
+
+
+
+.container a{
+    text-decoration: none;
+    color: #333333;
+}
+.spec-add{
+    background-color: #D1BC4F;
+    height: 140px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spec-add-content{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+}
+.spec-add p{
+    color: #333333;
+    font-family: Montserrat;
+    font-size: 30px;
+    margin: 0;
+}
+.spec-add img{
+    height: 50px;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+.left-content{
+    width: 53%;
+}
+.left-content img{
+    width: 100%;
+}
+.right-content{
+    width: 45%;
+}
+
+.tech-spec-text{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+.tech-spec-text p{
+    margin: 0;
+    padding: 0;
+}
+.dashed{
+    border-bottom: 1px dashed #333333;
+    width: 80%;
+}
+.table tr{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    line-height: 29px;
+}
+.table td{
+    width: 50%;
+    color: #333333;
+}
+.sec{
+    text-align: right;
+}
+.price{
+    margin-top: 10px;
+    border: 3px dashed #D14F4F;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 0px 10px 0px;
+    font-size: 20px;
+}
+.price button{
+    height: 50px;
+    width: 25%;
+    border: 0px;
+    background-color: #D14F4F;
+    color: lemonchiffon;
+    border-radius: 10px;
+}
+.content-contacts{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 20px;
+}
+.content-contacts span{
+    visibility: hidden;
+    background-color: #fff;
+    height: 50px;
+}
+.content-contacts a:hover span{
+    visibility: visible;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.flex p{
+    padding: 0;
+    margin: 0;
+}
+.limited {
+    max-width: 400px;
+    overflow: hidden;
+    position: relative;
+}
+.limited.l-200 {
+    max-width: 100px;
+}
+
+.limited .bottom {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1) 80%);
+    width: 100%;
+    transition: .3s;
+}
+.read-more-checker {
+        opacity: 0;
+    position: absolute;
+}
+.read-more-checker:checked ~ .limited {
+    max-width: none;
+}
+.read-more-checker:checked ~ .limited .bottom {
+    opacity: 0;
+    transition: .3s;
+}
+.read-more-checker ~ .read-more-button:before {
+    content: 'Показать »';
+}
+.read-more-checker:checked ~ .read-more-button:before {
+    content: 'Скрыть «';
+}
+.read-more-button {
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px;
+    color: #777;
+}
+.cars{
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+.car{
+    width: 24%;
+    height: 206px;
+    background-color: rgba(255, 141, 141, 1);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 20px 0;
+}
+.car:hover{
+    box-shadow: 0px 0px 41px 10px rgba(255, 141, 141, 1);
+}
+.car img{
+    max-width: 200px;
+    max-height: 125px;
+}
+.car p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 20px;
+}
+#prev{
+    display: none;
+}
+#next{
+    display: none;
+}
+.contacts{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.contacts p, a{
+    padding: 0;
+    margin: 0;
+    color: #333333;
+}
+.contacts h2{
+    color: #333333;
+    text-align: center;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.contacts-frame{
+    display: flex;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.contacts-frame img{
+    max-width: 30px;
+    max-height: 30px;
+    margin-right: 5px;
+}
+.registration{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+*{box-sizing:border-box}
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i&subset=cyrillic';
+body {
+    margin: 0;
+    background: #F7F7F7;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+}
+.form-wrap {
+    width: 100%;
+    background: #D14F4F;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 5px #333333;
+}
+.form-wrap *{transition: .1s linear}
+.profile {
+    width: 240px;
+    float: left;
+    text-align: center;
+    padding: 30px;
+}
+form {
+    background: white;
+    float: left;
+    width: calc(100% - 240px);
+    padding: 30px;
+    border-radius: 0 20px 20px 0;
+    color: rgba(255, 141, 141, 1);
+}
+.form-wrap:after, form div:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+form div {
+    margin-bottom: 15px;
+    position: relative;
+}
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    position: relative;
+    margin-top: 50px;
+}
+
+label, span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px 15px;
+    border-width: 0;
+    background: #e6e6e6;
+    outline: none;
+    margin: 0;
+}
+input[type="text"]:focus, input[type="email"]:focus {
+    box-shadow: inset 0 0 0 2px rgba(0,0,0,.2);
+}
+.radio label {
+    position: relative;
+    padding-left: 50px;
+    cursor: pointer;
+    width: 50%;
+    float: left;
+    line-height: 40px;
+}
+.radio input {
+    position: absolute;
+    opacity: 0;
+}
+.radio-control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background: #e6e6e6;
+    border-radius: 50%;
+    text-align: center;
+}
+.male:before {
+    content: "\f222";
+    font-family: FontAwesome;
+    font-weight: bold;
+}
+.female:before {
+    content: "\f221";
+    font-family: FontAwesome;
+    font-weight: bold;
+}
+.radio label:hover input ~ .radio-control,
+.radiol input:focus ~ .radio-control {
+    box-shadow: inset 0 0 0 2px rgba(0,0,0,.2);
+}
+.radio input:checked ~ .radio-control {
+    color: red;
+}
+select {
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 15px;
+    outline: 0;
+    border: 0;
+    background: #e6e6e6;
+    color: #7b7b7b;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+select::-ms-expand {
+    display: none;
+}
+.select-arrow {
+    position: absolute;
+    top: 38px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: #7b7b7b transparent transparent transparent;
+}
+button {
+    padding: 10px 0;
+    border-width: 0;
+    display: block;
+    width: 120px;
+    margin: 25px auto 0;
+    background: #60e6c5;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    text-transform: uppercase;
+}
+@media (max-width: 600px) {
+    body {display: block}
+    .form-wrap {margin: 20px auto; max-width: 550px; width:100%}
+    .profile, form {float: none; width: 100%}
+    h1 {margin-top: auto; padding-bottom: 50px;}
+    form {border-radius: 0 0 20px 20px}
+}
+.scale {
+    transition: 1s; /* Время эффекта */
+}
+.scale:hover {
+    transform: scale(1.1); /* Увеличиваем масштаб */
+}
+
+
+/*-------------ТАК ЖЕ В ПРОДАЖЕ----------*/
+
+
+.product:hover {
+ box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+
+.product-img {
+ height: 200px;
+}
+
+.product-title a {
+ color: #000;
+ font-weight: 500;
+ text-transform: uppercase;
+}
+
+.product-desc {
+ max-height: 60px;
+ overflow: hidden;
+}
+
+.product-price {
+ bottom: 15px;
+ left: 0;
+ position: absolute;
+ width: 100%;
+ color: #d51e08;
+ font-size: 18px;
+ font-weight: 500;
+}
+
+.product-img {
+ height: 200px;
+}
+
+.product-wrapper {
+  display: block;
+  width: 50%;
+  height: 50%;
+  float: left;
+  transition: width .2s;
+}
+
+@media only screen and (min-width: 450px) {
+  .product-wrapper {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .product-wrapper {
+    width: 33.333%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .product-wrapper {
+    width: 25%;
+  }
+}
+
+.product {
+  display: block;
+  /*border: 1px solid #FF6E97;*/
+  border-radius: 3px;
+  position: relative;
+  background: #fff;
+  margin: 0 20px 20px 0;
+  text-decoration: none;
+  color: #474747;
+  z-index: 0;
+  height: 300px;
+}
+
+.product-photo {
+  position: relative;
+  padding-bottom: 100%;
+  overflow: hidden;
+}
+
+.product-photo img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 66%;
+  margin: auto;
+  transition: transform .4s ease-out;
+}
+
+.product:hover .product-photo img {
+  transform: scale(1.05);
+}
+
+.product p {
+  text-align: center;
+  position: relative;
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 3.5em;
+  height: 3.5em;
+  overflow: hidden;
+}
+
+.product p:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0; 
+  background: linear-gradient(to left top, #fff, rgba(255, 255, 255, 0));
+}
+
+.product:hover .product-preview {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.product-buttons-wrap {
+  position: absolute;
+  top: 0;
+  left: -1px;
+  right: -1px;
+  bottom: 0;
+  visibility: hidden;
+  opacity: 0;
+  transform: scaleY(.8);
+  transform-origin: top;
+  transition: transform .2s ease-out;
+  z-index: -1;
+  backface-visibility: hidden;
+}
+
+.product-buttons-wrap:before {
+  content: "";
+  float: left;
+  height: 100%;
+  width: 100%;
+}
+
+.buttons {
+  position: relative;
+  top: -1px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+  border: 1px solid #56bd4b;
+  border-radius: 3px;
+}
+
+
+
+ <div class="container">
+            <div class="cars flex">
+                <div class="car">
+                    <img src="assets/img/second.jpg" alt="">
+                    <p>LADA Vesta</p>
+                </div>
+                <div class="car">
+                    <img src="assets/img/subaru_outback_6.jpg" alt="">
+                    <p>Subaru Outback</p>
+                </div>
+                <div class="car">
+                    <img src="assets/img/mercedesbenz_ml_1.jpg" alt="">
+                    <p>Mercedes-Benz ML</p>
+                </div>
+                <div class="car">
+                    <img src="assets/img/755680349514393.jpg" alt="">
+                    <p>Mercedes-Benz G</p>
+                </div>
+            </div>
+            <div class="cars flex">
+                <div class="car">
+                    <img src="assets/img/unnamed.jpg" alt="">
+                    <p>Chevrolet Niva</p>
+                </div>
+                <div class="car">
+                    <img src="assets/img/th.jpg" alt="">
+                    <p>Лада Приора</p>
+                </div>
+                <div class="car">
+                    <img src="assets/img/bmw-520__18069-460x345.jpg" alt="">
+                    <p>BMW 520</p>
+                </div>
+                <div class="car">
+                    <img src="assets/img/3645464.jpg" alt="">
+                    <p>Toyota Camry 75</p>
+                </div>
+            </div>
+        </div>

@@ -1,0 +1,21 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{%block content%}
+<section>
+    <div class="container">
+        <div class="registration">
+            <h2>Регистрация</h2>
+            <div class="form-wrap">
+                <div class="profile"> <img style="width: 100px" src="img/icons/reg/reges.svg" alt="">
+                    <h2>Регистрация</h2>
+                </div>
+                <form method="POST" >
+                    {% csrf_token %}
+                    {{form}}
+                    <input type="submit" name="Отправить">
+                </form>
+            </div>
+        </div>
+        </div>
+</section>
+{%endblock%}
